@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Front\Http\Controllers;
+namespace App\Forum\Http\Controllers;
 
 class PagesController extends BaseController
 {

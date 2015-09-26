@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Panel\Providers;
+namespace App\Forum\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class PanelServiceProvider extends ServiceProvider
+class ForumServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -14,7 +14,7 @@ class PanelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'panel');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'front');
         $this->routes($this->app['router']);
     }
 
@@ -30,8 +30,8 @@ class PanelServiceProvider extends ServiceProvider
 
     protected function routes(Router $route)
     {
-        $route->group(['namespace' => 'App\Panel\Http\Controllers'], function () {
-            return require app_path('Panel/Http/routes.php');
+        $route->group(['namespace' => 'App\Forum\Http\Controllers'], function () {
+            return require app_path('Forum/Http/routes.php');
         });
     }
 }

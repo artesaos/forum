@@ -146,7 +146,7 @@ return [
         App\Core\Providers\RouteServiceProvider::class,
         App\Core\Providers\ViewServiceProvider::class,
         # Front
-        App\Front\Providers\FrontServiceProvider::class,
+        App\Forum\Providers\ForumServiceProvider::class,
     ],
 
     /*
