@@ -145,6 +145,8 @@ return [
         Artesaos\Core\Providers\EventServiceProvider::class,
         Artesaos\Core\Providers\RouteServiceProvider::class,
         Artesaos\Core\Providers\ViewServiceProvider::class,
+
+        Artesaos\Domain\DomainServiceProvider::class,
         # Front
         Artesaos\Forum\Providers\ForumServiceProvider::class,
     ],
