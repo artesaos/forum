@@ -12,11 +12,10 @@ class CreateQuestionsCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('questions_categories', function (Blueprint $table) {
+        Schema::create('category_question', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('question_id');
-            $table->timestamps();
         });
     }
 
@@ -27,6 +26,6 @@ class CreateQuestionsCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('questions_categories');
+        Schema::drop('category_question');
     }
 }
