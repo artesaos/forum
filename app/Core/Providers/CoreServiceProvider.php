@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Providers;
+namespace Artesaos\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

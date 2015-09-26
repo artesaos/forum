@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Console;
+namespace Artesaos\Core\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \App\Core\Console\Commands\Inspire::class,
+        \Artesaos\Core\Console\Commands\Inspire::class,
     ];
 
     /**

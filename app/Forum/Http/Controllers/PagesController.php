@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forum\Http\Controllers;
+namespace Artesaos\Forum\Http\Controllers;
 
 class PagesController extends BaseController
 {

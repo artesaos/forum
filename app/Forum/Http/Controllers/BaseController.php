@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Forum\Http\Controllers;
+namespace Artesaos\Forum\Http\Controllers;
 
-use App\Core\Http\Controllers\Controller;
+use Artesaos\Core\Http\Controllers\Controller;
 
 abstract class BaseController extends Controller
 {

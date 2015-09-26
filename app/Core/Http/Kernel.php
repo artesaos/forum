@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Http;
+namespace Artesaos\Core\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -13,11 +13,11 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \App\Core\Http\Middleware\EncryptCookies::class,
+        \Artesaos\Core\Http\Middleware\EncryptCookies::class,
         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Core\Http\Middleware\VerifyCsrfToken::class,
+        \Artesaos\Core\Http\Middleware\VerifyCsrfToken::class,
     ];
 
     /**
@@ -26,8 +26,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \App\Core\Http\Middleware\Authenticate::class,
+        'auth' => \Artesaos\Core\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest' => \App\Core\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Artesaos\Core\Http\Middleware\RedirectIfAuthenticated::class,
     ];
 }

@@ -11,7 +11,7 @@
 |
 */
 
-$app = new App\Core\Illuminate\Foundation\Application(
+$app = new Artesaos\Core\Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
 
@@ -28,17 +28,17 @@ $app = new App\Core\Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    App\Core\Http\Kernel::class
+    Artesaos\Core\Http\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Core\Console\Kernel::class
+    Artesaos\Core\Console\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Core\Exceptions\Handler::class
+    Artesaos\Core\Exceptions\Handler::class
 );
 
 /*

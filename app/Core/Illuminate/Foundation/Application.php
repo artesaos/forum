@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Illuminate\Foundation;
+namespace Artesaos\Core\Illuminate\Foundation;
 
 use Illuminate\Foundation\Application as BaseApplication;
 

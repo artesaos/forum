@@ -140,13 +140,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Core\Providers\CoreServiceProvider::class,
-        App\Core\Providers\AuthServiceProvider::class,
-        App\Core\Providers\EventServiceProvider::class,
-        App\Core\Providers\RouteServiceProvider::class,
-        App\Core\Providers\ViewServiceProvider::class,
+        Artesaos\Core\Providers\CoreServiceProvider::class,
+        Artesaos\Core\Providers\AuthServiceProvider::class,
+        Artesaos\Core\Providers\EventServiceProvider::class,
+        Artesaos\Core\Providers\RouteServiceProvider::class,
+        Artesaos\Core\Providers\ViewServiceProvider::class,
         # Front
-        App\Forum\Providers\ForumServiceProvider::class,
+        Artesaos\Forum\Providers\ForumServiceProvider::class,
     ],
 
     /*

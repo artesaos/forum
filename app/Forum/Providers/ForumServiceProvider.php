@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Forum\Providers;
+namespace Artesaos\Forum\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
@@ -30,7 +30,7 @@ class ForumServiceProvider extends ServiceProvider
 
     protected function routes(Router $route)
     {
-        $route->group(['namespace' => 'App\Forum\Http\Controllers'], function () {
+        $route->group(['namespace' => 'Artesaos\Forum\Http\Controllers'], function () {
             return require app_path('Forum/Http/routes.php');
         });
     }
