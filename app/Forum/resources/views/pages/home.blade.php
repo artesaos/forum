@@ -1,4 +1,4 @@
-@extends('front::base')
+@extends('forum::base')
 
 @section('base:body')
     <header id="home-header">

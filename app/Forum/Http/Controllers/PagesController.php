@@ -20,6 +20,6 @@ class PagesController extends BaseController
 
         $quote = $quotes[array_rand($quotes, 1)];
 
-        return $this->view('front::pages.home', compact('quote'));
+        return $this->view('pages.home', compact('quote'));
     }
 }

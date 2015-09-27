@@ -14,7 +14,7 @@ class ForumServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'front');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'forum');
         $this->routes($this->app['router']);
     }
 
