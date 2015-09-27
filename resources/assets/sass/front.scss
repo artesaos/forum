@@ -1,5 +1,6 @@
-@import "_bootstrap";
-@import "_variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "mixins";
 
 html, body {
   width: 100%;
@@ -10,14 +11,12 @@ html, body {
   position: relative;
   width: 100%;
   min-height: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+  @include background-size(cover) ;
   background-position: center;
   background-image: url(http://ironsummitmedia.github.io/startbootstrap-creative/img/header.jpg);
   text-align: center;
   color: white;
+
   .header-content {
     position: relative;
     text-align: center;
@@ -42,8 +41,10 @@ html, body {
       }
     }
   }
+
   @media (min-width: 768px) {
     min-height: 100%;
+
     .header-content {
       position: absolute;
       top: 50%;
@@ -51,10 +52,12 @@ html, body {
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       padding: 0 50px;
+
       .header-content-inner {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
+
         p {
           font-size: 18px;
           max-width: 80%;
