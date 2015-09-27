@@ -23,14 +23,18 @@
 
                         <div class="row question-row">
                             <div class="col-md-2 col-sm-3 text-center">
-                                <a class="question-avatar" href="#">
-                                    <img src="http://api.randomuser.me/portraits/thumb/men/58.jpg" class="img-circle">
+                                <a class="question-avatar" href="javascript:;">
+                                    <img src="{{ $question->user->present()->avatar() }}"
+                                         alt="{{ $question->user->name }}"
+                                         class="img-circle">
                                 </a>
                             </div>
                             <div class="col-md-10 col-sm-9">
-                                <h3>{{ $question->title }}</h3>
+                                <h3>
+                                    <a href="javascript:;">{!! $question->present()->isResolvedLabel() !!} {{ $question->title }}</a>
+                                </h3>
                                 <div>
-                                    <span class="label label-default">cats</span>
+                                    {!! $question->present()->categoriesLabels() !!}
                                 </div>
                             </div>
                         </div>

@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 use Artesaos\Domain\Users\User;
 use Artesaos\Domain\Answers\Answer;
 use Artesaos\Domain\Categories\Category;
+use Laracasts\Presenter\PresentableTrait;
 
 class Question extends Model
 {
+    use PresentableTrait;
+
+    protected $presenter = QuestionPresenter::class;
+
     protected $table = 'questions';
 
     /**

@@ -16,6 +16,7 @@ class PagesController extends BaseController
         $this->seo()->setTitle('HOME');
 
         $questions = $repository->getAll();
+        $questions->load(['user', 'categories']);
 
         return $this->view('pages.home', compact('questions'));
     }
