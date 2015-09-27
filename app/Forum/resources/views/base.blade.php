@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    {!! app('seotools')->generate() !!}
     <link rel="stylesheet" href="{{ elixir('css/front.css') }}"/>
 </head>
 <body>

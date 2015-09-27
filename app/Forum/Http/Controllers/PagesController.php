@@ -9,6 +9,8 @@ class PagesController extends BaseController
      */
     public function home()
     {
+        $this->seo()->setTitle('HOME');
+        
         $quotes = [
             'Aquele que trabalha duro pode superar um gênio, porém, de nada adianta trabalhar duro se você não confia em você mesmo…',
             'Você é grande, mas não é dois! Eu sou pequeno, mas não sou metade.',

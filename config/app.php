@@ -137,15 +137,16 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Application Service Providers...
-         */
+        # Packages
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+
+        # Core
         Artesaos\Core\Providers\CoreServiceProvider::class,
         Artesaos\Core\Providers\AuthServiceProvider::class,
         Artesaos\Core\Providers\EventServiceProvider::class,
         Artesaos\Core\Providers\RouteServiceProvider::class,
         Artesaos\Core\Providers\ViewServiceProvider::class,
-
+        # Domains
         Artesaos\Domain\DomainServiceProvider::class,
         # Front
         Artesaos\Forum\Providers\ForumServiceProvider::class,
