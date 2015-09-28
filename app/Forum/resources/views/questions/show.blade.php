@@ -1,25 +1,13 @@
 @extends('forum::base')
 
 @section('base:body')
-    <div id="masthead">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <h1>Forum Laravel Brasil
-                        <p class="lead">Um forum para artesaos</p>
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel">
                     <div class="panel-body">
-
-                        @foreach($questions as $question)
 
                         <div class="row question-row">
                             <div class="col-md-2 col-sm-3 text-center">
@@ -31,17 +19,41 @@
                             </div>
                             <div class="col-md-10 col-sm-9">
                                 <h3>
-                                    <a href="{{ route('questions.show', $question->id) }}">{!! $question->present()->isResolvedLabel() !!} {{ $question->title }}</a>
+                                    {{ $question->title }}
                                 </h3>
                                 <div>
                                     {!! $question->present()->categoriesLabels() !!}
                                 </div>
+
+
+                                <hr />
+
+                                {{ $question->body }}
+
+                                <hr />
+
+                                <h2> {{ count($question->answer) }} resposta(s)</h2>
+
+                                <br />
+
+                                @foreach($question->answer as $answer)
+
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <img src="{{ $answer->user->present()->avatar(50) }}"
+                                                 alt="{{ $answer->user->name }}"
+                                                 class="img-circle">
+                                        </div>
+                                        <div class="col-sm-11">
+                                            {!! $answer->body !!}}
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                @endforeach
                             </div>
                         </div>
 
-                            <hr>
-
-                        @endforeach
                     </div>
                 </div>
             </div>
