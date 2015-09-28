@@ -29,6 +29,6 @@ class QuestionsController extends BaseController
         $question = $this->questions->findByID($id);
         $question->load(['answer', 'user', 'categories']);
 
-        return $question;
+        return $this->view('questions.show', compact('question'));
     }
 }
