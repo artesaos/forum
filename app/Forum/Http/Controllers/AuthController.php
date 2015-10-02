@@ -30,6 +30,12 @@ class AuthController extends BaseController
         return $this->view('auth.index');
     }
 
+    public function logout(){
+          $this->authService->logout();
+          $this->flash()->success('Deslogado, volte sempre!');
+          return redirect()->guest('/');
+    }
+
     /**
      * @param LoginFormRequest $request
      *
