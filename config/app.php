@@ -147,6 +147,7 @@ return [
         Artesaos\Core\Providers\RouteServiceProvider::class,
         Artesaos\Core\Providers\ViewServiceProvider::class,
         # Domains
+        Artesaos\Domain\Auth\AuthServiceProvider::class,
         Artesaos\Domain\DomainServiceProvider::class,
         # Front
         Artesaos\Forum\Providers\ForumServiceProvider::class,
