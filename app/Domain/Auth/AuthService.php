@@ -46,8 +46,7 @@ class AuthService implements AuthServiceContract
     }
 
     /**
-     *
-     * @param bool
+     * @return bool
      */
     public function logout()
     {
