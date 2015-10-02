@@ -48,7 +48,7 @@ class AuthController extends BaseController
             return redirect()->guest('/');
         }
 
-        $this->flash()->error('Deu ruim! revisa sua senha!');
+        $this->flash()->error('Deu ruim! revisa seus dados!');
 
         return redirect()->back()->withInput($request->only(['email']));
     }
