@@ -6,7 +6,6 @@ use Artesaos\Core\Http\Requests\Request as RequestsBase;
 
 class LoginFormRequest extends RequestsBase
 {
-
     public function authorize()
     {
         return true;
@@ -15,7 +14,7 @@ class LoginFormRequest extends RequestsBase
     public function rules()
     {
         return [
-            'email'    => 'required|email',
+            'email' => 'required',
             'password' => 'required',
         ];
     }

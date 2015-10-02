@@ -40,7 +40,11 @@ class AuthController extends BaseController
         // @TODO Error and Success messages
 
         $credentials = $request->only(['password', 'email']);
-        $remember    = $request->has('remember');
+        if (!filter_var($credentials['email'], FILTER_VALIDATE_EMAIL)) {
+            $credentials['user'] = $credentials['email'];
+            unset($credentials['email']);
+        }
+        $remember = $request->has('remember');
 
         if ($this->authService->byCredentials($credentials, $remember)) {
             $this->flash()->success('Bem vindo manolo!');
