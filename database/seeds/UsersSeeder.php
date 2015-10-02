@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use Artesaos\Domain\Users\User;
+use Illuminate\Database\Seeder;
 
 class UsersSeeder extends Seeder
 {
@@ -19,7 +19,8 @@ class UsersSeeder extends Seeder
         ]);
 
         factory(User::class)->create([
-            'email'    => 'admin@admin.com',
+            'user' => 'admin',
+            'email' => 'admin@admin.com',
             'password' => bcrypt('1234567890'),
         ]);
     }
