@@ -26,9 +26,15 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-right navbar-nav">
-                    <li>
-                        <a href="#">Cadastre-se [WIP]</a>
-                    </li>
+                    @if(Auth::check())
+                        <li>
+                            <a href="#">{{ Auth::user()->name }}</a>
+                        </li>
+                    @else
+                        <li>
+                            <a href="#">Cadastre-se [WIP]</a>
+                        </li>
+                    @endif
                 </ul>
             </nav>
         </div>

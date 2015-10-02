@@ -10,6 +10,9 @@
 |
 */
 
+Route::get('/auth', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
+Route::post('/auth', ['as' => 'auth.store', 'uses' => 'AuthController@store']);
+
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 Route::get('/questions', ['as' => 'questions.index', 'uses' => 'QuestionsController@index']);
 Route::get('/questions/{id}', ['as' => 'questions.show', 'uses' => 'QuestionsController@show']);

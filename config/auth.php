@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => App\Domain\Users\User::class,
+    'model' => Artesaos\Domain\Users\User::class,
 
     /*
     |--------------------------------------------------------------------------
