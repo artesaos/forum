@@ -139,6 +139,7 @@ return [
 
         # Packages
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         # Core
         Artesaos\Core\Providers\CoreServiceProvider::class,
@@ -199,6 +200,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Flash'     => Laracasts\Flash\Flash::class
 
     ],
 

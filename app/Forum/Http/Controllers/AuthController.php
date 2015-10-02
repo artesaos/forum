@@ -43,8 +43,12 @@ class AuthController extends BaseController
         $remember    = $request->has('remember');
 
         if ($this->authService->byCredentials($credentials, $remember)) {
+            $this->flash()->success('Bem vindo manolo!');
+
             return redirect()->guest('/');
         }
+
+        $this->flash()->error('Deu ruim! revisa sua senha!');
 
         return redirect()->back()->withInput($request->only(['email']));
     }
