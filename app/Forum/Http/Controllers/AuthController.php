@@ -40,10 +40,6 @@ class AuthController extends BaseController
         // @TODO Error and Success messages
 
         $credentials = $request->only(['password', 'email']);
-        if (!filter_var($credentials['email'], FILTER_VALIDATE_EMAIL)) {
-            $credentials['user'] = $credentials['email'];
-            unset($credentials['email']);
-        }
         $remember = $request->has('remember');
 
         if ($this->authService->byCredentials($credentials, $remember)) {
@@ -52,7 +48,7 @@ class AuthController extends BaseController
             return redirect()->guest('/');
         }
 
-        $this->flash()->error('Deu ruim! revisa seus dados!');
+        $this->flash()->error('Deu ruim! revise seus dados!');
 
         return redirect()->back()->withInput($request->only(['email']));
     }

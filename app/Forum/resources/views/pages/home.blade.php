@@ -25,7 +25,7 @@
                             <div class="col-md-2 col-sm-3 text-center">
                                 <a class="question-avatar" href="javascript:;">
                                     <img src="{{ $question->user->present()->avatar() }}"
-                                         alt="{{ $question->user->name }}"
+                                         alt="{{ $question->user->username }}"
                                          class="img-circle">
                                 </a>
                             </div>

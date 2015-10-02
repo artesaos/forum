@@ -1,9 +1,16 @@
 <?php
 
 $factory->define(Artesaos\Domain\Users\User::class, function (Faker\Generator $faker) {
+    $username = strtolower($faker->lastName);
+
+    if ($faker->boolean(80)) {
+        $username .= $faker->randomElement(['.', '$', '@', '-']);
+        $username .= $faker->randomDigitNotNull();
+    }
+
     return [
         'name' => $faker->name,
-        'user' => uniqid(),
+        'username' => $username,
         'email' => strtolower($faker->email),
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
