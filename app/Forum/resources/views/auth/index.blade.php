@@ -13,6 +13,7 @@
                         <label for="inputEmail" class="sr-only">Email address</label>
                         <input type="email"
                                name="email"
+                               value="{{ old('email') }}"
                                id="inputEmail"
                                class="form-control"
                                placeholder="Email address" required autofocus>

@@ -3,7 +3,7 @@
 namespace Artesaos\Forum\Http\Controllers;
 
 use Artesaos\Domain\Auth\Contracts\AuthService;
-use Illuminate\Http\Request;
+use Artesaos\Domain\Auth\Http\Requests\LoginFormRequest;
 
 class AuthController extends BaseController
 {
@@ -31,11 +31,11 @@ class AuthController extends BaseController
     }
 
     /**
-     * @param Request $request
+     * @param LoginFormRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(LoginFormRequest $request)
     {
         // @TODO Error and Success messages
 
@@ -46,6 +46,6 @@ class AuthController extends BaseController
             return redirect()->guest('/');
         }
 
-        return redirect()->withInput($request->only(['email']))->back();
+        return redirect()->back()->withInput($request->only(['email']));
     }
 }
