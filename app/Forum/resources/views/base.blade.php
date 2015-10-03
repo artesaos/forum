@@ -28,7 +28,7 @@
                 <ul class="nav navbar-right navbar-nav">
                     @if(Auth::check())
                         <li>
-                            <a href="#">{{ Auth::user()->name }}</a>
+                            <a href="#">{{ Auth::user()->username }}</a>
                         </li>
                         <li>
                             <a href="{{route('auth.logout')}}">Sair</a>
