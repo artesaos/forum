@@ -30,9 +30,15 @@
                         <li>
                             <a href="#">{{ Auth::user()->username }}</a>
                         </li>
+                        <li>
+                            <a href="{{route('auth.logout')}}">Sair</a>
+                        </li>
                     @else
                         <li>
-                            <a href="#">Cadastre-se [WIP]</a>
+                            <a href="{{route('auth.register')}}">Cadastre-se [WIP]</a>
+                        </li>
+                        <li>
+                            <a href="{{route('auth.index')}}">Logar</a>
                         </li>
                     @endif
                 </ul>

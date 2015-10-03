@@ -21,4 +21,9 @@ interface AuthService
      * @param bool            $remember
      */
     public function login(Authenticatable $user, $remember = false);
+
+    /**
+    * @return void
+    */
+    public function logout();
 }
