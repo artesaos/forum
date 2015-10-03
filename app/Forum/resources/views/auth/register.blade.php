@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-push-3">
-                <form class="form-signin" method="POST" action="{{ route('auth.register.save') }}">
+                <form class="form-signin" method="POST" action="{{ route('auth.register.store') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <h2 class="form-signin-heading">Cadastre-se</h2>
 

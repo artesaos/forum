@@ -10,11 +10,14 @@
 |
 */
 
-Route::get('/auth', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
-Route::post('/auth', ['as' => 'auth.store', 'uses' => 'AuthController@store']);
-Route::get('/auth/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
-Route::get('/register', ['as' => 'auth.register', 'uses' => 'AuthController@register']);
-Route::post('/register', ['as' => 'auth.register.save', 'uses' => 'AuthController@registerUser']);
+Route::group(['prefix' => 'auth'],
+    function () {
+        Route::get('/', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
+        Route::post('/', ['as' => 'auth.store', 'uses' => 'AuthController@store']);
+        Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
+        Route::get('/register', ['as' => 'auth.register', 'uses' => 'AuthController@register']);
+        Route::post('/register', ['as' => 'auth.register.store', 'uses' => 'AuthController@registerUser']);
+    });
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 
