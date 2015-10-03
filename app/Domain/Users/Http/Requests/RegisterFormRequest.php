@@ -16,6 +16,7 @@ class RegisterFormRequest extends RequestsBase
     {
         return [
             'name'    => 'required',
+            'username' => 'required',
             'email'    => 'required|email',
             'password' => 'required',
             'confirmation_password' => 'required|same:password',

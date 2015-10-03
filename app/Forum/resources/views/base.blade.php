@@ -35,7 +35,7 @@
                         </li>
                     @else
                         <li>
-                            <a href="{{route('register')}}">Cadastre-se [WIP]</a>
+                            <a href="{{route('auth.register')}}">Cadastre-se [WIP]</a>
                         </li>
                         <li>
                             <a href="{{route('auth.index')}}">Logar</a>

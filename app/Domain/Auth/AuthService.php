@@ -53,10 +53,10 @@ class AuthService implements AuthServiceContract
     }
 
     /**
-     * @return bool
+     * @return void
      */
     public function logout()
     {
-        return $this->auth->logout();
+        $this->auth->logout();
     }
 }

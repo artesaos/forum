@@ -22,6 +22,11 @@ class DomainServiceProvider extends ServiceProvider
             \Artesaos\Domain\Answers\Contracts\AnswerRepository::class,
             \Artesaos\Domain\Answers\AnswerRepository::class
         );
+
+        $this->app->singleton(
+            \Artesaos\Domain\Users\Contracts\UserRepository::class,
+            \Artesaos\Domain\Users\UserRepository::class
+        );
     }
 
 }
