@@ -5,7 +5,6 @@
         "This file is @generated automatically"
     ],
     "hash": "156dea6c1ce412acf012b5b67bed88fe",
-    "content-hash": "05b38a7d8dc26a41ac4992a7c9ed9a8b",
     "packages": [
         {
             "name": "artesaos/seotools",
