@@ -47,6 +47,8 @@
     </header>
 @show
 
+@yield('base:home-header')
+
 <div class="container">
     <div class="col-md-8 col-md-push-2">
         @include('flash::message')
