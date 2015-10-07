@@ -1,17 +1,20 @@
 @extends('forum::base')
 
-@section('base:body')
-    <div id="masthead">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <h1>Forum Laravel Brasil
-                        <p class="lead">Um forum para artesaos</p>
-                    </h1>
-                </div>
+@section('base:home-header')
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>Forum Laravel Brasil
+                    <p class="lead">Um forum para artesaos</p>
+                </h1>
             </div>
         </div>
     </div>
+</div>
+@endsection
+
+@section('base:body')
 
     <div class="container">
         <div class="row">
