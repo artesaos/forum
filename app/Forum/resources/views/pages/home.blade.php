@@ -1,6 +1,6 @@
-@extends('forum::base')
+@extends('forum::layouts.full')
 
-@section('base:body')
+@section('forum.body')
     <div id="masthead">
         <div class="container">
             <div class="row">
