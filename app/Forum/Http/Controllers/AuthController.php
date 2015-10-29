@@ -8,8 +8,7 @@ use Artesaos\Domain\Users\Contracts\UserRepository;
 use Artesaos\Domain\Users\Http\Requests\RegisterFormRequest;
 
 /**
- * Class AuthController
- * @package Artesaos\Forum\Http\Controllers
+ * Class AuthController.
  */
 class AuthController extends BaseController
 {
@@ -29,7 +28,7 @@ class AuthController extends BaseController
      */
     public function __construct(AuthService $authService, UserRepository $userRepository)
     {
-        $this->authService    = $authService;
+        $this->authService = $authService;
         $this->userRepository = $userRepository;
     }
 
@@ -50,6 +49,7 @@ class AuthController extends BaseController
     {
         $this->authService->logout();
         $this->flash()->success('Deslogado, volte sempre!');
+
         return redirect('/');
     }
 
@@ -63,7 +63,7 @@ class AuthController extends BaseController
         // @TODO Error and Success messages
 
         $credentials = $request->only(['password', 'email']);
-        $remember    = $request->has('remember');
+        $remember = $request->has('remember');
 
         if ($this->authService->byCredentials($credentials, $remember)) {
             $this->flash()->success('Bem vindo manolo!');

@@ -15,13 +15,13 @@ class UsersSeeder extends Seeder
         User::truncate();
 
         factory(User::class, 30)->create([
-            'password' => bcrypt('1234567890'),
+            'password' => '1234567890',
         ]);
 
         factory(User::class)->create([
             'username' => 'admin',
             'email' => 'admin@admin.com',
-            'password' => bcrypt('1234567890'),
+            'password' => '1234567890',
         ]);
     }
 }

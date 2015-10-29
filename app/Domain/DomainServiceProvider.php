@@ -28,5 +28,4 @@ class DomainServiceProvider extends ServiceProvider
             \Artesaos\Domain\Users\UserRepository::class
         );
     }
-
 }

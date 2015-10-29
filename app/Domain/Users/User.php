@@ -40,7 +40,8 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
-    public function setPasswordAttribute($value){
-      $this->attributes['password'] = bcrypt($value);
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 }

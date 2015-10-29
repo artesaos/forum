@@ -6,7 +6,6 @@ use Artesaos\Domain\Auth\Contracts\AuthService as AuthServiceContract;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Guard;
 
-
 class AuthService implements AuthServiceContract
 {
     /**
@@ -21,7 +20,6 @@ class AuthService implements AuthServiceContract
     {
         $this->auth = $auth;
     }
-
 
     /**
      * @param array $credentials

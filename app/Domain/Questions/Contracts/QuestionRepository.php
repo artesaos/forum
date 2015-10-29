@@ -6,5 +6,4 @@ use Artesaos\Core\Contracts\Repositories\CommonRepository;
 
 interface QuestionRepository extends CommonRepository
 {
-
 }

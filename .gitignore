@@ -1,12 +1,12 @@
 /vendor
 /node_modules
+/.idea
+/.vagrant
+.env
+*.cache
 Homestead.yaml
 Homestead.json
-.env
 bower_components
 public/build
 public/css
 public/fonts
-/.idea
-/.vagrant
-Homestead.yaml

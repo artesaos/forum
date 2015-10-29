@@ -26,7 +26,7 @@ abstract class Controller extends BaseController
     protected function view($view = null, $data = [], $mergeData = [])
     {
         if (!empty($this->view_namespace) and !str_contains($view, '::')) {
-            $view = $this->view_namespace . $view;
+            $view = $this->view_namespace.$view;
         }
 
         return view($view, $data, $mergeData);
