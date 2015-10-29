@@ -2,6 +2,10 @@
 
 namespace Artesaos\Forum\Http\Controllers;
 
+use Socialize;
+use Artesaos\Domain\Auth\AuthenticateUser;
+use Artesaos\Domain\Auth\AuthenticateUserListener;
+use Illuminate\Http\Request;
 use Artesaos\Domain\Auth\Contracts\AuthService;
 use Artesaos\Domain\Auth\Http\Requests\LoginFormRequest;
 use Artesaos\Domain\Users\Contracts\UserRepository;
@@ -10,8 +14,7 @@ use Artesaos\Domain\Users\Http\Requests\RegisterFormRequest;
 /**
  * Class AuthController.
  */
-class AuthController extends BaseController
-{
+class AuthController extends BaseController implements AuthenticateUserListener{
     /**
      * @var AuthService
      */
@@ -47,6 +50,7 @@ class AuthController extends BaseController
      */
     public function logout()
     {
+
         $this->authService->logout();
         $this->flash()->success('Deslogado, volte sempre!');
 
@@ -105,4 +109,56 @@ class AuthController extends BaseController
 
         return redirect()->back();
     }
+
+
+    public function getGithub(AuthenticateUser $authenticateUser, Request $request){
+        $hasCode = $request->has('code');
+        $hasErro = $request->has('error');
+
+        if($hasErro){
+            return redirect()->route('home');
+        }
+
+        return $authenticateUser->github($hasCode, $this);
+    }
+
+    public function getFacebook(AuthenticateUser $authenticateUser, Request $request){
+        $hasCode = $request->has('code');
+        $hasErro = $request->has('error');
+        
+        if($hasErro){
+            return redirect()->route('home');
+        }
+
+        return $authenticateUser->facebook($hasCode, $this);
+    }
+
+    public function getGoogle(AuthenticateUser $authenticateUser, Request $request){
+        $hasCode = $request->has('code');
+        $hasErro = $request->has('error');
+        
+        if($hasErro){
+            return redirect()->route('home');
+        }
+
+        return $authenticateUser->google($hasCode, $this);
+    }
+
+    public function getTwitter(AuthenticateUser $authenticateUser, Request $request){
+
+        $hasCode = $request->has('oauth_token');
+        $hasErro = $request->has('error');
+        
+        if($hasErro){
+            return redirect()->route('home');
+        }
+       
+        return $authenticateUser->twitter($hasCode, $this);
+    }
+
+    public function userHasLoggedIn($user) {
+        $this->flash()->success('Bem vindo manolo!');
+        return redirect()->guest('/');
+    }
+
 }
