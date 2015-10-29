@@ -6,7 +6,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'       => "Forum Laravel Brasil", // set false to total remove
+            'title'       => 'Forum Laravel Brasil', // set false to total remove
             'description' => 'Um forum para artesaos', // set false to total remove
             'separator'   => ' - ',
             'keywords'    => [],
@@ -20,8 +20,8 @@ return [
             'bing'      => null,
             'alexa'     => null,
             'pinterest' => null,
-            'yandex'    => null
-        ]
+            'yandex'    => null,
+        ],
     ],
     'opengraph' => [
         /*
@@ -34,7 +34,7 @@ return [
             'type'        => false,
             'site_name'   => false,
             'images'      => [],
-        ]
+        ],
     ],
     'twitter' => [
         /*
@@ -43,6 +43,6 @@ return [
         'defaults' => [
           //'card'        => 'summary',
           //'site'        => '@LuizVinicius73',
-        ]
-    ]
+        ],
+    ],
 ];

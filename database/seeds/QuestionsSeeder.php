@@ -8,7 +8,6 @@ use Artesaos\Domain\Categories\Category;
 
 class QuestionsSeeder extends Seeder
 {
-
     protected $users;
     protected $categories;
 
@@ -17,7 +16,7 @@ class QuestionsSeeder extends Seeder
         Answer::truncate();
         Question::truncate();
 
-        $this->users      = User::all(['id'])->lists('id');
+        $this->users = User::all(['id'])->lists('id');
         $this->categories = Category::all(['id'])->lists('id');
     }
 
@@ -40,7 +39,6 @@ class QuestionsSeeder extends Seeder
                 $this->makeAnswers($question);
             });
     }
-
 
     protected function makeAnswers(Question $question)
     {

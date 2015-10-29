@@ -6,5 +6,4 @@ use Artesaos\Warehouse\Repositories\CommonRepository as BaseRepository;
 
 class CommonRepository extends BaseRepository
 {
-
 }

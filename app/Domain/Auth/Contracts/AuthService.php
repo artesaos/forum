@@ -23,7 +23,7 @@ interface AuthService
     public function login(Authenticatable $user, $remember = false);
 
     /**
-    * @return void
-    */
+     * @return void
+     */
     public function logout();
 }

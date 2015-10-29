@@ -6,7 +6,6 @@ use Artesaos\Core\Http\Requests\Request as RequestsBase;
 
 class RegisterFormRequest extends RequestsBase
 {
-
     public function authorize()
     {
         return true;
