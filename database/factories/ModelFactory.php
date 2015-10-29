@@ -12,7 +12,7 @@ $factory->define(Artesaos\Domain\Users\User::class, function (Faker\Generator $f
         'name' => $faker->name,
         'username' => $username,
         'email' => strtolower($faker->email),
-        'password' => bcrypt(str_random(10)),
+        'password' => str_random(10),
         'remember_token' => str_random(10),
     ];
 });
