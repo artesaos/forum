@@ -15,6 +15,12 @@ Route::group(['prefix' => 'auth'],
     function () {
         Route::get('/', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
         Route::post('/', ['as' => 'auth.store', 'uses' => 'AuthController@store']);
+        
+        Route::get('/facebook', ['as' => 'auth.store', 'uses' => 'AuthController@getFacebook']);
+        Route::get('/github', ['as' => 'auth.store', 'uses' => 'AuthController@getGithub']);
+        Route::get('/twitter', ['as' => 'auth.store', 'uses' => 'AuthController@getTwitter']);
+        Route::get('/google', ['as' => 'auth.store', 'uses' => 'AuthController@getGoogle']);
+
         Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
         Route::get('/register', ['as' => 'auth.register', 'uses' => 'AuthController@register']);
         Route::post('/register', ['as' => 'auth.register.store', 'uses' => 'AuthController@registerUser']);
