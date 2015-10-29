@@ -140,6 +140,7 @@ return [
         # Packages
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         # Core
         Artesaos\Core\Providers\CoreServiceProvider::class,
@@ -201,6 +202,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class
 
     ],
 
