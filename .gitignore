@@ -8,3 +8,5 @@ public/build
 public/css
 public/fonts
 /.idea
+/.vagrant
+Homestead.yaml
