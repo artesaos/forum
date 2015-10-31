@@ -16,34 +16,15 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="panel">
-                    <div class="panel-body">
-
-                        @foreach($questions as $question)
-
-                        <div class="row question-row">
-                            <div class="col-md-2 col-sm-3 text-center">
-                                <a class="question-avatar" href="javascript:;">
-                                    <img src="{{ $question->user->present()->avatar() }}"
-                                         alt="{{ $question->user->username }}"
-                                         class="img-circle">
-                                </a>
-                            </div>
-                            <div class="col-md-10 col-sm-9">
-                                <h3>
-                                    <a href="{{ route('questions.show', $question->id) }}">{!! $question->present()->isResolvedLabel() !!} {{ $question->title }}</a>
-                                </h3>
-                                <div>
-                                    {!! $question->present()->categoriesLabels() !!}
-                                </div>
-                            </div>
-                        </div>
-
-                            <hr>
-
-                        @endforeach
-                    </div>
-                </div>
+                @foreach($questions as $question)
+                    @include('forum::questions.parts.loop-row')
+                    <hr>
+                @endforeach
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-push-2">
+                <a href="{{ route('questions.index') }}" class="btn btn-info btn-block">Perguntas</a>
             </div>
         </div>
     </div>

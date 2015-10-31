@@ -3,7 +3,10 @@
 @section('core.header_menu')
     <ul class="nav navbar-nav">
         <li class="{{ request()->is('/') ? 'active' : null }}">
-            <a href="{{ url() }}">Home</a>
+            <a href="{{ url() }}"> <i class="fa fa-home "></i> Home</a>
+        </li>
+        <li class="{{ request()->is('questions*') ? 'active' : null }}">
+            <a href="{{ route('questions.index') }}"> <i class="fa fa-question-circle "></i> Perguntas</a>
         </li>
     </ul>
     <ul class="nav navbar-right navbar-nav">

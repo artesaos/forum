@@ -28,9 +28,25 @@ class QuestionPresenter extends Presenter
     public function isResolvedLabel()
     {
         if ($this->entity->is_resolved) {
-            return;
+            return "<i class='fa fa-check text-success'></i> <span class='sr-only'>[Resolvido]</span>";
         }
 
-        return "<span class='label label-success'>RESOLVIDO</span>";
+        return;
+    }
+
+    /**
+     * @return string
+     */
+    public function statusClass()
+    {
+        return ($this->entity->is_resolved) ? 'resolved' : 'unresolved';
+    }
+
+    /**
+     * @return int
+     */
+    public function countAnswers()
+    {
+        return $this->entity->answers()->count();
     }
 }

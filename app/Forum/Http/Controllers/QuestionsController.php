@@ -17,17 +17,27 @@ class QuestionsController extends BaseController
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \Illuminate\View\View
      */
     public function index()
     {
-        return $this->questions->getAll();
+        $this->seo()->setTitle('Perguntas');
+
+        $questions = $this->questions->getAll();
+        $questions->load(['user', 'categories']);
+
+        return $this->view('questions.index', compact('questions'));
     }
 
+    /**
+     * @param $id
+     *
+     * @return \Illuminate\View\View
+     */
     public function show($id)
     {
         $question = $this->questions->findByID($id);
-        $question->load(['answer', 'user', 'categories']);
+        $question->load(['answers', 'user', 'categories']);
 
         return $this->view('questions.show', compact('question'));
     }

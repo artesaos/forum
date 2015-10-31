@@ -34,7 +34,7 @@
 
                                 <br />
 
-                                @foreach($question->answer as $answer)
+                                @foreach($question->answers as $answer)
 
                                     <div class="row">
                                         <div class="col-sm-1">
