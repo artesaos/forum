@@ -4,7 +4,7 @@
     <div id="masthead">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <h1>Forum Laravel Brasil
                         <p class="lead">Um forum para artesaos</p>
                     </h1>
