@@ -1,3 +1,5 @@
+$small:767px;
+
 .question-row {
   h3 {
     margin-top: 0;
@@ -14,4 +16,14 @@
   &-unresolved {
     border-left: 1px solid $brand-warning;
   }
+  @media screen and (max-width: $small) {
+    text-align:justify;
+    img{
+     text-align:center;
+     margin:0 auto;
+   }
+    h3{
+     text-align:center;
+   }
+ }
 }

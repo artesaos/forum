@@ -32,6 +32,8 @@
     @yield('core.body')
 </div>
 <!-- /#base-container -->
-
+<footer class="main">
+    <p>Laravel  <i class="fa fa-heart red"></i> . Copyright © Laravel Brasil.</p>
+</footer>
 </body>
 </html>
