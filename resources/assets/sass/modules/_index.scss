@@ -1,0 +1,42 @@
+$heart: #FA8072;
+$hearth: #CD5C5C;
+
+.navbar-default{
+	background: #FFF;
+
+	.navbar-brand{
+		color:#333;
+	}
+	.navbar-nav li a{
+		color:#333;
+	}
+	.navbar-toggle{
+		background:#1A242F;
+		border-color:#FFF;
+	&:hover{
+		background:$heart;
+		}}
+}
+.panel{
+	margin-top:50px;
+}
+
+
+.main{
+	background: #FAFAFA none repeat scroll 0% 0%;
+	padding: 35px 20px;
+	text-align: center;
+	footer.main p{
+		color: #aeaeae;
+		font-size: 16px;
+		margin-bottom: 10px;			
+	}
+	.fa{
+		color:$heart;
+		&:hover{
+			color:$hearth;
+		}
+	}
+}
+
+
