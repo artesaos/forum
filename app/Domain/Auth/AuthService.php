@@ -24,11 +24,11 @@ class AuthService implements AuthServiceContract
     /**
      * @param array $credentials
      *
-     * @param bool  $remeber
+     * @param bool  $remember
      *
      * @return true
      */
-    public function byCredentials(array $credentials, $remeber = false)
+    public function byCredentials(array $credentials, $remember = false)
     {
         $email = array_get($credentials, 'email');
 
@@ -37,7 +37,7 @@ class AuthService implements AuthServiceContract
             unset($credentials['email']);
         }
 
-        return $this->auth->attempt($credentials);
+        return $this->auth->attempt($credentials, $remember);
     }
 
     /**

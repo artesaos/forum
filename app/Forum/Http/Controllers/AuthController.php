@@ -64,8 +64,6 @@ class AuthController extends BaseController implements AuthenticateUserListener{
      */
     public function store(LoginFormRequest $request)
     {
-        // @TODO Error and Success messages
-
         $credentials = $request->only(['password', 'email']);
         $remember = $request->has('remember');
 
