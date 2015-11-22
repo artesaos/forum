@@ -2,8 +2,8 @@
 
 namespace Artesaos\Core\Contracts\Repositories;
 
-use Artesaos\Warehouse\Contracts\Repositories\Common;
+use Artesaos\Warehouse\Contracts\Repositories\CommonRepository as CommonRepositoryContract;
 
-interface CommonRepository extends Common
+interface CommonRepository extends CommonRepositoryContract
 {
 }

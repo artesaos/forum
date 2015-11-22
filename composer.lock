@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/artesaos/warehouse.git",
-                "reference": "0d7cd9c58171575e60a62639fde9c43db59fa770"
+                "reference": "dde3254862070ff9bfe901acadede7a26377bcaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artesaos/warehouse/zipball/0d7cd9c58171575e60a62639fde9c43db59fa770",
-                "reference": "0d7cd9c58171575e60a62639fde9c43db59fa770",
+                "url": "https://api.github.com/repos/artesaos/warehouse/zipball/dde3254862070ff9bfe901acadede7a26377bcaa",
+                "reference": "dde3254862070ff9bfe901acadede7a26377bcaa",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 "warehouse"
             ],
             "abandoned": "https://github.com/prettus/l5-repository",
-            "time": "2015-10-01 21:47:14"
+            "time": "2015-11-22 19:41:38"
         },
         {
             "name": "classpreloader/classpreloader",
